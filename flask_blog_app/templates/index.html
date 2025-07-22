@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Global Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>🌍 Welcome to the Global Blog</h1>
+
+    <a class="link-button" href="/new">📝 Write a New Blog</a>
+
+    <ul>
+        {% for post in posts %}
+            <li>
+                <a href="{{ url_for('show_post', post_id=post[0]) }}">
+                    {{ post[1] }} <br>
+                    <small>{{ post[3] }}</small>
+                </a>
+            </li>
+        {% else %}
+            <li>No posts yet.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

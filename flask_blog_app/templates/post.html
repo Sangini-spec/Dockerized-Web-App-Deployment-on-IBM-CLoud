@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ post[1] }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>{{ post[1] }}</h1>
+    <small>Posted on: {{ post[3] }}</small>
+    <p>{{ post[2] }}</p>
+    <br>
+    <a class="link-button" href="/">Back to Blog</a>
+</body>
+</html>
+
